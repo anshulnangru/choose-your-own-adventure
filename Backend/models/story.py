@@ -1,7 +1,7 @@
 from sqlalchemy import Column, Integer, String, DateTime, ForeignKey, JSON, Boolean
 from sqlalchemy.sql import func
 from sqlalchemy.orm import relationship
-from Backend.db.database import Base
+from db.database import Base
 
 class Story(Base):
     __tablename__ = "stories"
@@ -24,4 +24,4 @@ class StoryNode(Base):
     is_winning=Column(Boolean, default=False)
     options=Column(JSON, default=list)
 
-    story=relationship("story", back_populates="nodes")
+    story=relationship("Story", back_populates="nodes")
