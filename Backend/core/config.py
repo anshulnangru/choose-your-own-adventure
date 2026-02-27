@@ -8,7 +8,7 @@ class Settings(BaseSettings):
     DEBUG: bool = False
 
     DATABASE_URL: str
-    OPENAI_API_KEY: str
+    GROQ_API_KEY: str 
 
     ALLOWED_ORIGINS: List[str] = []
 
