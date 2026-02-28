@@ -34,7 +34,7 @@ class StoryGenerator:
                 "human",
                 f"Create the story with this theme: {theme}"
             )
-        ]).partial(format_instructions=story_parser.get_format_instructions())
+        ])
 
         chain = prompt | llm
         raw_response = chain.invoke({})

@@ -108,7 +108,7 @@ def build_complete_story_tree(db: Session, story: Story) -> CompleteStoryRespons
             id=node.id,
             content=node.content,
             is_ending=node.is_ending,
-            is_winning_ending=node.is_winning_ending,
+            is_winning=node.is_winning,
             options=node.options
         )
         node_dict[node.id]=node_response

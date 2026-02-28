@@ -9,7 +9,7 @@ class StoryOptionsSchema(BaseModel):
 class StoryNodeBase(BaseModel):
     content: str
     is_ending: bool=False
-    is_winning_ending: bool=False
+    is_winning: bool=False
 
 class CompleteStoryNodeResponse(StoryNodeBase):
     id: int
@@ -30,7 +30,7 @@ class CreateStoryRequest(BaseModel):
 
 class CompleteStoryResponse(StoryBase):
     id: int
-    createdAt: datetime
+    created_at: datetime
     root_node: CompleteStoryNodeResponse
     all_nodes: Dict[int,CompleteStoryNodeResponse]
 
