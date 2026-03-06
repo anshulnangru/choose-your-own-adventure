@@ -55,7 +55,7 @@ function StoryLoader()
             <div className="error-message">
                 <h2>Story Not Found</h2>
                 <p>{error}</p>
-                <button onClick={createNewStory} Go to story generator></button>
+                <button onClick={createNewStory}> Go to story generator</button>
             </div>
 
         </div>
